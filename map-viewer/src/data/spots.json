@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Malibu",
+    "lat": 34.0259,
+    "lng": -118.7798,
+    "score": 85,
+    "isTopSpot": true
+  },
+  {
+    "id": 2,
+    "name": "Huntington Beach",
+    "lat": 33.6595,
+    "lng": -117.9988,
+    "score": 72,
+    "isTopSpot": false
+  },
+  {
+    "id": 3,
+    "name": "Trestles",
+    "lat": 33.3825,
+    "lng": -117.5931,
+    "score": 68,
+    "isTopSpot": false
+  }
+]
