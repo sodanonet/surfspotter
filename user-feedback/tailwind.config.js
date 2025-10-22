@@ -5,4 +5,7 @@ module.exports = {
   content: [
     './src/**/*.{html,ts,scss}',
   ],
+  plugins: [
+    require('daisyui'),
+  ],
 }
