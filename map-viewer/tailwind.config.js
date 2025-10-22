@@ -1,9 +1,7 @@
+/** @type {import('tailwindcss').Config} */
 const sharedConfig = require('../shared-config/tailwind.config');
-
 module.exports = {
   ...sharedConfig,
-  content: [
-    './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
-  ],
-}
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  plugins: [require('daisyui')],
+};

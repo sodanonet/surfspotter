@@ -1,26 +1,128 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@layer base {
+  :root {
+    --font-family-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@layer components {
+  /* Utility classes for our surf theme */
+  .bg-primary {
+    background-color: rgb(var(--color-primary));
+  }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  .text-primary {
+    color: rgb(var(--color-primary));
+  }
 
-#app {
-  width: 100%;
-  height: 100vh;
+  .bg-secondary {
+    background-color: rgb(var(--color-secondary));
+  }
+
+  .text-secondary {
+    color: rgb(var(--color-secondary));
+  }
+
+  .bg-accent {
+    background-color: rgb(var(--color-accent));
+  }
+
+  .text-accent {
+    color: rgb(var(--color-accent));
+  }
+
+  .text-primary-content {
+    color: white;
+  }
+
+  /* Badge components (DaisyUI-style) */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+  }
+
+  .badge-secondary {
+    background-color: rgb(var(--color-secondary));
+    color: white;
+  }
+
+  .badge-accent {
+    background-color: rgb(var(--color-accent));
+    color: white;
+  }
+
+  .badge-lg {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .badge-primary {
+    background-color: rgb(var(--color-primary));
+    color: white;
+  }
+
+  /* Navbar component */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    min-height: 3rem;
+  }
+
+  .navbar .flex-1 {
+    flex: 1;
+  }
+
+  .navbar .flex-none {
+    flex: 0 0 auto;
+  }
+
+  /* Card component */
+  .card {
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  :root {
+    font-family: var(--font-family);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  #app {
+    width: 100%;
+    height: 100vh;
+  }
 }
