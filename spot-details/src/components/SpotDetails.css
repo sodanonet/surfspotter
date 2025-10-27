@@ -1,0 +1,100 @@
+.spot-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Mobile-first responsive padding */
+@media (min-width: 640px) {
+  .spot-details-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .spot-details-container {
+    padding: 2rem;
+  }
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Smooth transitions for cards */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Touch-friendly interactive elements */
+@media (hover: none) and (pointer: coarse) {
+  .card:hover {
+    transform: none;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Badge styling improvements */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Responsive text sizing */
+.text-responsive {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .text-responsive {
+    font-size: 1rem;
+  }
+}
+
+/* Score circle animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.spot-details-container > * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Better touch targets for mobile */
+.btn {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Improve readability on small screens */
+@media (max-width: 639px) {
+  .card-title {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
